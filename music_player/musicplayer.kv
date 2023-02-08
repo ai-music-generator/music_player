@@ -1,0 +1,35 @@
+# Design file
+
+<PlayerLayout@GridLayout>:
+    cols: 2
+
+    Label:
+        size_hint: 0.8, 0.1
+        
+    Button:
+        text: X
+        background_color: 1, 0, 0, 1
+        on_press: app.stop()
+        
+
+    Image:
+        arg: assets/disc.png
+        size_hint: 0.3, 0.8
+    
+    GridLayout:
+        rows : 2
+
+        Label:
+            id: lbl_filename
+            text: "File name"
+            size_hint: 1, 0.2
+            
+        GridLayout:
+            cols : 2
+
+            Button:
+                id: play_pause_button
+                background_normal: assets/play.png
+                
+            Button:
+                background_normal: assets/download.png
